@@ -14,9 +14,6 @@ venv/
 Thumbs.db
 *.log
 
-# No necesitamos el HTML sin corregir
-index.html
-
 # Archivos temporales
 *.tmp
 *.bak
