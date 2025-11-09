@@ -1,0 +1,22 @@
+# Python
+*.py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# No necesitamos el HTML sin corregir
+index.html
+
+# Archivos temporales
+*.tmp
+*.bak
