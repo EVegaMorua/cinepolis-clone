@@ -957,7 +957,58 @@ var wpcf7_recaptcha = {
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://cinepolis.co.cr/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1" id="wpcf7-recaptcha-js"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-70ebf9d4056f93a0d7b","applicationID":"512133537","transactionName":"MhBSZQoZXkVRAkFcWwtacVIMEV9YHxJcW1MJEB1cGidTX14EWFQ=","queueTime":0,"applicationTime":647,"atts":"HldRE0IDTUs=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-70ebf9d4056f93a0d7b","applicationID":"512133537","transactionName":"MhBSZQoZXkVRAkFcWwtacVIMEV9YHxJcW1MJEB1cGidTX14EWFQ=","queueTime":0,"applicationTime":647,"atts":"HldRE0IDTUs=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+// Desactivar checkboxes de view options y fechas
+document.addEventListener('DOMContentLoaded', function() {
+    // Desactivar view options (VIP, 2D, etc)
+    var viewOptionInputs = document.querySelectorAll('input[name="field-view-option"]');
+    viewOptionInputs.forEach(function(input) {
+        input.disabled = true;
+        input.style.pointerEvents = 'none';
+        input.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+    
+    var viewOptionLabels = document.querySelectorAll('.view-option label');
+    viewOptionLabels.forEach(function(label) {
+        label.style.pointerEvents = 'none';
+        label.style.cursor = 'default';
+        label.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+    
+    // Desactivar botones de fechas
+    var movieDateInputs = document.querySelectorAll('input[name="field-movie-date"]');
+    movieDateInputs.forEach(function(input) {
+        input.disabled = true;
+        input.style.pointerEvents = 'none';
+        input.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+    
+    var movieDateLabels = document.querySelectorAll('.movie-date label');
+    movieDateLabels.forEach(function(label) {
+        label.style.pointerEvents = 'none';
+        label.style.cursor = 'default';
+        label.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+});
+</script>
+</body>
 </html>
 
 <!--
