@@ -959,7 +959,7 @@ var wpcf7_recaptcha = {
 <script type="text/javascript" src="https://cinepolis.co.cr/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1" id="wpcf7-recaptcha-js"></script>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-70ebf9d4056f93a0d7b","applicationID":"512133537","transactionName":"MhBSZQoZXkVRAkFcWwtacVIMEV9YHxJcW1MJEB1cGidTX14EWFQ=","queueTime":0,"applicationTime":647,"atts":"HldRE0IDTUs=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script>
 <script type="text/javascript">
-// Desactivar checkboxes de view options y fechas
+// Desactivar checkboxes de view options y fechas, redirigir horarios
 document.addEventListener('DOMContentLoaded', function() {
     // Desactivar view options (VIP, 2D, etc)
     var viewOptionInputs = document.querySelectorAll('input[name="field-view-option"]');
@@ -1018,6 +1018,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         });
     }
+    
+    // Redirigir horarios de películas a página de agradecimiento
+    var projectionInputs = document.querySelectorAll('input[name="field-projection"]');
+    projectionInputs.forEach(function(input) {
+        input.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'gracias.html';
+        });
+    });
+    
+    var projectionLabels = document.querySelectorAll('input[name="field-projection"] + label');
+    projectionLabels.forEach(function(label) {
+        label.style.cursor = 'pointer';
+        label.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'gracias.html';
+        });
+    });
 });
 </script>
 </body>
