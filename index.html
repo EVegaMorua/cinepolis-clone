@@ -1006,6 +1006,18 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         });
     });
+    
+    // Desactivar botón de calendario
+    var calendarButton = document.querySelector('.button-choose-date');
+    if (calendarButton) {
+        calendarButton.style.pointerEvents = 'none';
+        calendarButton.style.cursor = 'default';
+        calendarButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    }
 });
 </script>
 </body>
